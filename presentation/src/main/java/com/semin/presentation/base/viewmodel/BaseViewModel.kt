@@ -1,4 +1,4 @@
-package com.semin.presentation.base
+package com.semin.presentation.base.viewmodel
 
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.channels.Channel
