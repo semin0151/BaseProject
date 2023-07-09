@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id "com.google.protobuf" version '0.9.0'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -36,4 +38,26 @@ dependencies {
     testImplementation "junit:junit:$rootProject.junit"
     androidTestImplementation "androidx.test.ext:junit:$rootProject.androidxJunit"
     androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.androidxEspressoCore"
+
+    // Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.coroutineVersion"
+
+    // dataStore
+    implementation "androidx.datastore:datastore:$rootProject.dataStoreVersion"
+    implementation "androidx.datastore:datastore-core:$rootProject.dataStoreVersion"
+    implementation "com.google.protobuf:protobuf-javalite:$rootProject.protoBufVersion"
+
+    // Room
+    implementation "androidx.room:room-runtime:$rootProject.roomVersion"
+    implementation "androidx.room:room-ktx:$rootProject.roomVersion"
+    kapt "androidx.room:room-compiler:$rootProject.roomVersion"
+    annotationProcessor "androidx.room:room-compiler:$rootProject.roomVersion"
+    testImplementation "androidx.room:room-testing:$rootProject.roomVersion"
+
+    // Retrofit, GsonConverter, Okhttp
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion"
+    implementation "com.squareup.okhttp3:okhttp:$rootProject.okhttpVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.okhttpVersion"
+
 }
