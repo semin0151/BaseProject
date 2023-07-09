@@ -2,7 +2,7 @@ package com.semin.app
 
 import android.app.Application
 
-class SeminApplication: Application() {
+class BaseApplication: Application() {
     override fun onCreate() {
         super.onCreate()
     }
